@@ -1,0 +1,314 @@
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans 3', sans-serif;
+    color: #151515;
+    box-sizing: border-box;
+    background: #FAFAFA;
+}
+
+/* Styling for the header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.8rem;
+    background: #FFF;
+    
+}
+
+/* Logo and title container */
+.header__brand {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    max-width: 50px; /* Adjust the size of your logo */
+    margin-right: 0.5rem;
+}
+
+.header__title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+}
+
+/* Navigation links */
+.header__nav {
+    display: flex;
+    
+}
+
+.header__link {
+    text-decoration: none;
+    color: #333;
+    margin-left: 2rem;
+    font-size: 0.9rem;
+}
+
+.header__link.active {
+    color: #FF6347; /* Adjust the color as needed */
+    font-weight: bold;
+    /* Add any other styles you want for the active link */
+}
+
+
+
+/* Hero section styling */
+.hero {
+    background-image: url("/images/blog-image-hero.png");
+    background-size: cover;
+    background-position: center;
+    color: #fff; /* Adjust text color for readability */
+    
+    padding: 6.25rem 1.25rem 1.25rem;
+}
+
+/* Date styling */
+.blog-date {
+    
+font-size: 0.9rem;
+
+font-weight: 400;
+
+}
+
+/* Hero title styling */
+.blog-title {
+    
+
+font-size: 2rem;
+
+font-weight: 700;
+
+}
+
+/* Hero description styling */
+.blog-description {
+    font-size: 1rem;
+    max-width: 600px; /* Adjust width as needed */
+    margin-left: auto;
+    margin-right: auto; /* Center the text block */
+}
+
+.blog-container {
+    max-width: 800px; /* Adjust the maximum width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 0 20px; /* Add some padding to the sides for spacing */
+}
+
+.blog-posts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1rem;
+}
+
+/* Blog section styling */
+.blog {
+    padding: 2.5rem 1rem 0; /* Adjust padding as needed */
+    display: grid;
+    grid-template-columns: 1fr;
+    
+}
+
+.blog-post {
+    margin-bottom: 2.5rem; /* Space between blog posts */
+}
+
+.blog-post__image {
+    width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    
+}
+
+.blog-post__date {
+    font-size: 1rem; /* Adjust font size as needed */
+    color: #666; /* Adjust color as needed */
+    
+}
+
+.blog-post__title {
+    font-size: 1.5rem; /* Adjust font size as needed */
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.blog-post__content {
+    font-size: 1rem; /* Adjust font size as needed */
+    color: #505050;
+}
+
+/* Add this CSS for hiding additional blog posts by default */
+.blog.show-more-posts .blog-post:nth-child(n+4) {
+    display: block;
+}
+
+.blog:not(.show-more-posts) .blog-post:nth-child(n+4) {
+    display: none;
+}
+
+
+/* View More link styling */
+.view-more-container {
+    text-align: center;
+    padding: 1rem 0; /* Adjust padding as needed */
+    
+    margin-bottom: 1rem;
+    
+}
+
+.view-more-link {
+    text-decoration: underline;
+    font-size: 1rem; /* Adjust font size as needed */
+    color: #000; /* Adjust color as needed */
+    font-weight: 700;
+    
+}
+
+.recent-post-title {
+    text-align: center;
+    
+   
+}
+
+.blog-page .blog-date {
+    font-size: 0.8rem; /* Adjust to the desired size */
+}
+
+.blog-page .blog-title {
+    font-size: 1.8rem; /* Adjust to the desired size */
+}
+
+.blog-page .blog-description {
+    font-size: 0.9rem; /* Adjust to the desired size */
+}
+
+.about-me {
+    padding-bottom: 0;
+    
+}
+
+.about-me-avatar {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: left;
+    margin: 1rem;
+}
+
+.avatar-image {
+    width: 11.375rem;
+    
+}
+
+.about-me-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-me-title {
+    font-size: 2rem;
+}
+
+.about-me-description {
+    font-size: 1rem;
+    margin-top: 0;
+}
+
+/* Footer styling */
+.footer {
+    background-color: #202020; /* Adjust background color as needed */
+    color: #ECECEC; /* Adjust text color as needed */
+    padding: 1rem 0; /* Adjust padding as needed */
+    text-align: center;
+    
+}
+
+.footer-text {
+    margin-bottom: 0.4rem;
+}
+
+.small-text {
+    margin-top: 0;
+}
+
+
+
+
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    
+    .header__title {
+        font-size: 1.25rem;
+}
+
+
+.blog-title {
+    font-size: 3.5vw;
+}
+
+.blog-description {
+    margin: 0;
+    font-size: 2vw;
+    max-width: 60%; /* Adjust width as needed */
+    text-align: left;
+    line-height: 1.6;
+
+}   
+
+.blog-page .blog-title {
+        font-size: 2.5rem; /* Adjust to the desired size for larger screens */
+    }
+
+    .blog-page .blog-description {
+        font-size: 1rem; /* Adjust to the desired size for larger screens */
+        max-width: 100%;
+       
+    }
+    
+    .blog-container {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        margin:  1rem auto;
+    }
+    
+    .blog-post__image {
+        max-width: 1000px; /* Set a max-width for the image if needed */
+        width: 100%; /* This will make the image responsive within the max-width */
+        height: auto; /* Maintain aspect ratio */
+        margin-top: 1.5rem;
+    }
+    
+    .about-me {
+        display: flex; /* Use flexbox to lay out children side by side */
+        flex-direction: row;
+        align-items: center; /* Center items vertically */
+       
+       
+        margin: 0 auto; /* Center the container */
+        padding: 0 20px; /* Add padding to the container */
+    }
+
+    
+
+    
+
+    /* Adjust the text styles if needed */
+    .about-me-title {
+        font-size: 2.5rem; /* Adjust font size as needed */
+    }
+
+    .about-me-description {
+        font-size: 1rem; /* Adjust font size as needed */
+    }
+    
+
+
+
+
+}
